@@ -203,6 +203,8 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+ 
 }
 
 .nav__logo, .nav__toggle {
@@ -213,6 +215,8 @@ input {
  /*=============== font-weight: var(--font-semi-bold);===============*/
  font-family: 'Rancho', cursive;
  font-size: 4ex;
+ 
+ padding-left:0;
 }
 
 .nav__toggle {
@@ -391,6 +395,7 @@ input {
   background: none;
 }
 
+
 /*=============== ABOUT ===============*/
 .about__data {
   text-align: center;
@@ -558,67 +563,6 @@ input {
   font-size: 1.2rem;
 }
 
-/*=============== PLACES ===============*/
-.place__card, .place__img {
-  height: 230px;
-}
-
-.place__container {
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-}
-
-.place__card {
-  position: relative;
-  overflow: var(--img-hidden);
-}
-
-.place__card:hover .place__img {
-  transform: var(--img-scale);
-}
-
-.place__img {
-  transition: var(--img-transition);
-}
-
-.place__content, .place__title {
-  color: #d11aff;
-  text-align: center;
-  top: 100px;
-}
-
-.place__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: .75rem .75rem 1rem;
-}
-
-.place__subtitle, .place__price {
-  display: block;
-}
-
-.place__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-25);
-}
-
-.place__subtitle {
-  font-size: var(--smaller-font-size);
-  margin-bottom: var(--mb-1-25);
-}
-
-.place__button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: .75rem 1rem;
-}
 
 /*=============== SUBSCRIBE ===============*/
 .subscribe__bg {
@@ -629,6 +573,7 @@ input {
 .subscribe__title, 
 .subscribe__description {
   color: var(--white-color);
+  
 }
 
 .subscribe__description {
@@ -636,23 +581,6 @@ input {
   margin-bottom: var(--mb-2-5);
 }
 
-.subscribe__form {
-  background-color: var(--input-color);
-  padding: .5rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.subscribe__input {
-  width: 70%;
-  padding-right: .5rem;
-  background-color: var(--input-color);
-  color: var(--text-color);
-}
-
-.subscribe__input::placeholder {
-  color: var(--text-color);
-}
 
 /*=============== SPONSORS ===============*/
 .sponsor__container {
@@ -738,32 +666,7 @@ input {
   color: var(--text-color);
 }
 
-/*========== SCROLL UP ==========*/
-.scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -20%;
-  background-color: var(--first-color);
-  padding: .5rem;
-  display: flex;
-  opacity: .9;
-  z-index: var(--z-tooltip);
-  transition: .4s;
-}
 
-.scrollup:hover {
-  background-color: var(--first-color-alt);
-  opacity: 1;
-}
-
-.scrollup__icon {
-  color: var(--white-color);
-  font-size: 1.2rem;
-}
-
-/* Show scroll */
-.show-scroll {
-  bottom: 5rem;
 }
 
 /*=============== SCROLL BAR ===============*/
