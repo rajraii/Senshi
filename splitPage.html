@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Split page on Page scroll</title>
+</head>
+<body>
+    <section>
+        <div class="side" id="side1">
+            <video src="static/video/videoplayback.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+        <div class="side" id="side2">
+            <video src="static/video/videoplayback.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="content">
+        <h2>Split video on scroll</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde omnis consequatur minus placeat, quas animi laborum eligendi autem consectetur repellendus exercitationem, accusamus eos amet. Pariatur magnam quas modi rerum illum temporibus voluptas sequi ipsa corrupti? Dolorum iusto voluptatibus quis asperiores veritatis consequuntur. Totam magni eum temporibus nostrum quia dolore eaque?</p>
+    </div>
+
+    <script>
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+
+        window.addEventListener('scroll',function(){
+            side1.style.left = -window.pageYOffset+'px';
+            side2.style.left = window.pageYOffset+'px';
+        })
+    </script>
+
+</body>
+</html>
