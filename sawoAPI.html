@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<style>
+    .container1{
+        display: flex;
+        justify-content: space-around;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .container{
+        /* margin: 1000px auto; */
+        /* background-color: black; */
+        border: 2px solid gray;
+        /* background-color: rgb(93, 7, 206); */
+        background: url(static/assets/forest.jpg);
+        border-radius: 25px;
+        /* padding: 10px; */
+        margin: 100px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+    }
+
+    h1{
+        color: white;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+/* 
+    #sawo-container{
+        display: flex;
+        flex-direction: row;
+        
+    }  */
+</style>
+<body>
+    <div class="container">
+        <!-- <img src="https://wallpaperaccess.com/full/1567759.jpg" alt="" srcset=""> -->
+        <div class="container1">
+            <h1>Log-in</h1>
+            <div id="sawo-container" style="height: 365px; width: 300px; margin-top: 0px;"></div>
+        </div>
+    </div>
+    <!-- <div>
+        <h4>Already logged-in ?<a href="http://">sign-in</a></h4>
+    </div> -->
+    <script src="https://websdk.sawolabs.com/sawo.min.js"></script>    
+    <script>
+    var config = {
+        // should be same as the id of the container created on 3rd step
+        containerID: "sawo-container",
+        // can be one of 'email' or 'phone_number_sms'
+        identifierType: "email",
+        // Add the API key copied from 2nd step
+        apiKey: "96cc2d39-0a76-4813-966c-fbe644c15a1c",
+        // Add a callback here to handle the payload sent by sdk
+        onSuccess: (payload) => {
+            //console.log(payload)
+            window.location = "http://127.0.0.1:5500/splitPage.html"
+        },
+    };
+    var sawo = new Sawo(config);
+    sawo.showForm();
+</script>
+</body>
+</html>
